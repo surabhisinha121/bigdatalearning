@@ -1,0 +1,229 @@
+
+
+Trendytech Ops
+Sat, 28 Sept, 11:41 (3 days ago)
+to me
+
+Dear Student,
+
+Given below are your Lab Credentials.
+
+Login URL: g02.itversity.com username: itv015043 password: 113v85z31uigdt62ejuo9izidrllz5we
+===================================================================================================
+This Lab will be valid for the next 6 months.
+
+More about HDFS
+FOLLOWS Master slave Architectutre
+named node Master
+data node slave
+
+big files divided into blocks 
+block size in Hadoop 128 Mb
+suppose 500 mb file how will we divide
+
+
+DATANODE holding actual data
+4 blocks  128 block 1
+          128 block 2
+		  128 block 3
+		  116 block 4 
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+Named Node 
+		
+		holding metadata of data stored 
+		
+		file  1 block 1 datanode 1
+		file 2 block 2 data node 2
+		file 3 block 3 data node 3
+		file 4 block 4 data node 4
+		
+		named node is like index page telling where what is kept
+		
+named node is heart of hdfs
+
+in this case 4 node hadoop cluster
+
+can goes beyond 4000 nodes without any ?issues
+why the block size is 128 mb? 
+ 
+the less block size it will be more parallelism . but if we reduce block size too much it ll overburden named blocks
+
+what if we make block size is too big then less parallelism. but its actually good size maintaining parallism and no overburdening named nodes
+
+admin can change block size
+
+when ur datanodes actually grows our metadata in named data also increases . so in newer version of hadoop we have namednode federation to give scalablity from namedode
+ perspective aswell
+its introduced in newer version of hadoop.
+so that we don't get scalablity from datanodes but also from namednode
+
+to ensure data safety we have data replication by default its 3.Admin can change
+
+when named node fails secondary node come in pic . secondary node come in pic. secondary namenode is for fault tolerance
+namednode federation is for scalablity . so that named node doesnot get overburden with metadata
+
+rack - is a group of servers kept at different geographic location . so that if one rack goes down other rack are still up and working
+
+
+if you want to install hadoop 
+we can manually intall hdfs,mapreduce,hive ,yarn which is actually not developers task.i need a cluster up and running.
+
+
+you need a readymade vm.vm is virtual machine
+
+cloudera quickstart vm where things are preinstalled 
+
+oracle virtual box- you can installl the cloudera vm
+pseudo  distributed code
+namenode and datanode is running on same vm
+ur system ll get very slow n u ll not get fill of peroduction environmemt
+
+in production multinode cluster
+
+multinode cluster - fully distributed cluster (seprate named node, data note and gateway)
+                     pseudo distributed (named dode and data note in same machine)
+					 
+					 practice ?
+					 linux
+					 hdfs
+					 python
+					 pypark
+					 DSA
+					 KAFKA
+					 STRUCTUTRED STREAMING
+					 HIVE
+					 
+					 FOR CLOUD SERVICES
+					 
+					 ADF ,DATABRICKS
+					
+					
+WE HAVE TO LOGIN TO GATEWAY NOdes not to data node or named node
+
+http://m01.itversity.com:9870/
+
+linux command
+pwd - present work directory - in linux by default its home directory		 
+whoami - tells usename
+linux follows a tree like structure denoted by  / forward slash- in linux we says directory in windows folder
+cd - change directory
+ls -l - showcasing all 
+cd~ - TO TAKE ME TO MY HOME DIRECTORY
+
+CD .. - TO GO BACK IN PARENT DIRECTORY
+cd -   to go back to previous directory
+cd ../.. - it will take me two directory back
+cd . - current directory
+clear - clear the screen
+cd / data - where lot of data
+
+113v85z31uigdt62ejuo9izidrllz5we
+how to go from  data/trendytech to data/retail - cd.. /retail
+
+absolute path / relative path
+
+absolute path means from root bhow to go
+relative means from where we are currently how to go
+
+ls command 
+===================
+it is for listing files and directories
+
+blue color directories
+green executable file
+black color normal file
+=================
+if i press up arrow it will give the last commam=nd
+
+ls-l
+==============
+it shows permission , when created size
+
+ls -lt newest file first
+ls -ltr  oldest file first
+ls -l gives ascending order based on diictionary
+ls -lr gives descending order based on diictionary
+ls -R recursively prints all files and folder
+ls -a - all hidden files  start with .
+ls - Ra/aR - RECURSIVELY PRINT ALL FILES INCLUDING HIDDEN FOLDERS
+ls -ltaR - LONG LISTING BASED ON TIME Hidden files recursively
+how to create empty file
+
+
+touch is use to creste empty 
+
+file - touch filename
+rm filename will remove file
+chmod 777 filename (rwx owner rw group ,1 others)
+
+cat - is to see the content
+mkdir is use to create directory
+rmdir to remove directory only ewhen if its empty
+if the directory is not empty 
+rm -R Directory name to forcefuly delete the directory 
+cp command is used to copy files and diictionary
+
+cp file 1 file 2
+cp file 1 dir 2
+cp is like copy paste
+ cp file1 dir2
+ cp dir3 dir2 (will not work ).we have to do it recursively
+ cp -R dir3 dir 2 (it will work)
+if in same directory then how to move within directory then cd directory name
+
+mv command 
+=======================
+mv command is used to move file from one directory to another or to rename file
+mv filename  newfilename
+mv filename1 directory name1 (it ll move filename1 to directoryname 1)
+
+
+==================
+to create file with content
+vi file name 
+press i button on keyboard to insert mode
+then write content 
+press esc
+shift +:
+wq (w for save q for quit)
+head part -00000
+cat part-00000
+will show 1o line
+head -5 filenametoread
+tail
+will show 1o line
+tail -5 filenametoread
+------------
+cat /data/retail_db/orders/*
+
+/* to show all files
+
+
+history - to show what all commands are run
+wc to give line count word cou nt and charactercount
+wc samlefile
+
+with cat command also we can create and type in file
+cat > sampletext and save using ctrl +d
+creating two files with data and merging to a new file
+cat data1.txt data2.txt >>merge.txt
+cat file1
+cat >file1 (open for writing)
+cat >> file2 (for appending)
+
+===============
+du is for disk usage
+$du /data/trendytech
+$du -h /data/trendytech(give result in human readable form in gb ,mb,kb)
+=======================
+for search grep data(keyword to be searched) *
+
+
