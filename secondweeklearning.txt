@@ -1,16 +1,5 @@
 
 
-Trendytech Ops
-Sat, 28 Sept, 11:41 (3 days ago)
-to me
-
-Dear Student,
-
-Given below are your Lab Credentials.
-
-Login URL: g02.itversity.com username: itv015043 password: 113v85z31uigdt62ejuo9izidrllz5we
-===================================================================================================
-This Lab will be valid for the next 6 months.
 
 More about HDFS
 FOLLOWS Master slave Architectutre
