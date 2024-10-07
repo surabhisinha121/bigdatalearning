@@ -1,0 +1,8 @@
+local AGgregation is called combiner  - combiner runs at Mappefr - outpot of mapper is given to combiner
+combiner is working exactly the same as reducer . but on small set not on entire set
+use combiner with a caution 
+ when we talk about max , min and sum using combiner or without combiner the result will be same which is correct .
+but when we apply combiner on average it can change result so think before using combiner
+more work at mapper
+less data transfer at network
+improves parallelism
